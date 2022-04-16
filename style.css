@@ -58,6 +58,9 @@ button {
 
 .endMessage {
 	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+	z-index: 10;
 }
 
 .footer {
@@ -70,8 +73,24 @@ button {
 .start-button {
 	background-color: none;
 	border: none;
-	border-radius: 50%;
+	border-radius: 10%;
 	padding: 20px;
 	font-weight: bold;
 	background-color: chartreuse;
+}
+
+.playAgain-button {
+	background-color: none;
+	border: none;
+	border-radius: 10%;
+	padding: 20px;
+	font-weight: bold;
+	background-color: coral;
+}
+
+.overlay {
+	opacity: 0.4;
+	width: 100%;
+	height: 100%;
+	position: fixed;
 }
