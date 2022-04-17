@@ -57,11 +57,11 @@ button {
 }
 
 .endMessage {
+	margin-top: 30px;
 	padding: 20px;
 	font-size: 20px;
 	text-align: center;
 	z-index: 10;
-	margin-top:30px;
 }
 
 .footer {
@@ -94,4 +94,8 @@ button {
 	width: 100%;
 	height: 100%;
 	position: fixed;
+}
+
+.hidden {
+	display: none;
 }

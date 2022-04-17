@@ -8,13 +8,12 @@ const scissorButton = document.querySelector(".scissor-button");
 const startButton = document.querySelector(".start-button");
 const endMessage = document.querySelector(".endMessage");
 const playAgainBtn = document.querySelector(".playAgain-button");
-
 const container = document.querySelector(".container");
+
 // With this event listener, the user input text is updated to which button is pressed
 userButtons.addEventListener("click", addUserInputText);
 
-// startButton.addEventListener("click", startFuntion);
-
+// User input logic
 function addUserInputText(event) {
 	event.preventDefault();
 
@@ -34,12 +33,7 @@ function addUserInputText(event) {
 	startButton.addEventListener("click", function (e) {
 		computerInput.value = computerChoice;
 
-		// const text = "";
-
-		// switch (computerInput.value) {
-		// 	case "Rock":
-		// 		text = "You won";
-		// };
+		// End message logic
 		if (userInput.value === computerInput.value) {
 			endMessage.value = "It's a tie! Try again.";
 		} else if (
@@ -59,18 +53,18 @@ function addUserInputText(event) {
 			endMessage.value = "You Won!";
 		}
 
+		// Make the end message text read only
 		endMessage.readOnly = true;
-		startButton.readOnly = true;
 
-		// if (endMessage.value == "You Won!") {
-		// 	container.classList.add("overlay");
-		// }
+		// When the results are displayed, hide the start button
+		startButton.classList.add("hidden");
+
+		// When the results are displayed, the text content of the play again button changes to Restart.
+		playAgainBtn.textContent = "Restart!";
 	});
 }
 
+// Reload the page on pressing Restart
 playAgainBtn.addEventListener("click", function () {
 	location.reload();
 });
-// function startFunction() {
-// 	console.log("click");
-// }
